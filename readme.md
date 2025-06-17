@@ -29,7 +29,7 @@ net_admin ALL=(ALL:ALL)NOPASSWD:ALL
 
 ```bash
 # Создание пользователя
-useradd -m -u 1010 sshuser
+useradd -m -u 1020 sshuser
 
 # Установка пароля 
 passwd sshuser
@@ -337,7 +337,14 @@ chronyc tracking | grep Stratum
 
 ## Примечания
 В задание есть тема установить яндекс браузер, ищите это легкие баллы 
-
-
-
-- 
+Isp - br (ens35(c9) 172.20.5.0/28)
+Br - Isp (ens34(54) 172.20.5.1/28)
+Isp - hq (ens34(bf) 172.20.4.0/28)
+Hq - Isp (ens34(ba) 172.20.4.1/28)
+Hq - hqin (ens34(c4) 172.20.0.1/26)
+Hq-srv - hq (ens33(d6) 172.20.0.2/26)
+Hq-cli - hq (ens34(af) 172.20.0.3/28)
+Br - brin (ens35(5e) 172.20.6.1/27)
+Br-srv - br (ens33(b2) 172.20.6.2/27)
+Br-DC - br (винда 172.20.6.3/27)
+-
